@@ -18,7 +18,7 @@ body {
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAAUdEVYdENyZWF0aW9uIFRpbWUAMy82LzEygrTcTAAAAFRJREFUSIljfPDggZRf5RIGGNjUHsNATz6jXmSL1Kb2GLiAX+USBnrymRgGGDCORgFmoNAXjEbBaBSMRsFoFIxGwWgUjEbBaBSMRsFoFIxGwWgUAABYNujumib3wAAAAABJRU5ErkJggg==') fixed;
 }
 
-.wrapper {
+#page-wrapper {
   width: 640px;
   margin: 0 auto;
   background: #DEDEDE;
@@ -53,13 +53,19 @@ strong {
   font-weight: 700;
 }
 
-header {
+#header-container  .header-wrapper {
   -moz-border-radius: 8px 8px 0 0;
   -webkit-border-radius: 8px 8px 0 0;
   -o-border-radius: 8px 8px 0 0;
   -ms-border-radius: 8px 8px 0 0;
   -khtml-border-radius: 8px 8px 0 0;
   border-radius: 8px 8px 0 0;
+  position: relative;
+  border-bottom: 1px solid #B2D2E1;
+}
+
+#header-container .header-wrapper {
+  padding: 15px 20px;
   background: #C6EAFA;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ddfbfc), color-stop(100%, #c6eafa));
   background: -webkit-linear-gradient(#ddfbfc, #c6eafa);
@@ -67,11 +73,8 @@ header {
   background: -o-linear-gradient(#ddfbfc, #c6eafa);
   background: -ms-linear-gradient(#ddfbfc, #c6eafa);
   background: linear-gradient(#ddfbfc, #c6eafa);
-  position: relative;
-  padding: 15px 20px;
-  border-bottom: 1px solid #B2D2E1;
 }
-header h1 {
+#header-container .header-wrapper h1 {
   margin: 0;
   padding: 0;
   font-size: 24px;
@@ -79,28 +82,28 @@ header h1 {
   color: #069;
   text-shadow: rgba(255, 255, 255, 0.9) 0 1px 0;
 }
-header.without-description h1 {
+#header-container .header-wrapper.without-description h1 {
   margin: 10px 0;
 }
-header p {
+#header-container .header-wrapper p {
   margin: 0;
   color: #61778B;
   width: 300px;
   font-size: 13px;
 }
-header p.view {
+#header-container .header-wrapper p.view {
   display: none;
   font-weight: 700;
   text-shadow: rgba(255, 255, 255, 0.9) 0 1px 0;
   -webkit-font-smoothing: antialiased;
 }
-header p.view a {
+#header-container .header-wrapper p.view a {
   color: #06c;
 }
-header p.view small {
+#header-container .header-wrapper p.view small {
   font-weight: 400;
 }
-header ul {
+#header-container .header-wrapper ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -124,7 +127,7 @@ header ul {
   box-shadow: inset rgba(255, 255, 255, 0.45) 0 1px 0, inset rgba(0, 0, 0, 0.2) 0 -1px 0;
   width: 240px;
 }
-header ul:before {
+#header-container .header-wrapper ul:before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -144,21 +147,21 @@ header ul:before {
   -o-box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0, inset rgba(255, 255, 255, 0.7) 0 -1px 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0, inset rgba(255, 255, 255, 0.7) 0 -1px 0;
 }
-header ul li {
+#header-container .header-wrapper ul li {
   width: 79px;
   float: left;
   border-right: 1px solid #3A7CBE;
   height: 38px;
 }
-header ul li + li {
+#header-container .header-wrapper ul li + li {
   width: 78px;
   border-left: 1px solid #8BBEF3;
 }
-header ul li + li + li {
+#header-container .header-wrapper ul li + li + li {
   border-right: none;
   width: 79px;
 }
-header ul a {
+#header-container .header-wrapper ul a {
   line-height: 1;
   font-size: 11px;
   color: #fff;
@@ -170,14 +173,45 @@ header ul a {
   height: 40px;
   text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
 }
-header ul a strong {
+#header-container .header-wrapper ul a strong {
   font-size: 14px;
   display: block;
   color: #fff;
   -webkit-font-smoothing: antialiased;
 }
 
-section {
+#header-container .menu-container ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#header-container .menu-container ul:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+#header-container .menu-container ul li {
+  float: left;
+  position: relative;
+}
+
+#header-container .menu-container ul a {
+  color:#333;
+  font-size:12px;
+  height:32px;
+  line-height:32px;
+  padding:0 2em;
+  display: inline-block;
+  transition: opacity 0.2s ease-in 0s;
+}
+
+#header-container .menu-container ul a:hover {
+  background: #ababab none repeat scroll 0 0;
+}
+
+#main-container {
   padding: 15px 20px;
   font-size: 15px;
   border-top: 1px solid #fff;
@@ -194,6 +228,44 @@ section {
   -khtml-border-radius: 0 0 8px 8px;
   border-radius: 0 0 8px 8px;
   position: relative;
+}
+
+article header {
+  margin-bottom: 22px;
+}
+
+article h1 {
+  font-size: 22px;
+  line-height: 1.2em;
+}
+
+article h1 + .article-media {
+  margin-top: -15px;
+}
+
+article .article-media {
+  line-height: 21px;
+  font-size: 11px;
+  margin-bottom: 1em;
+}
+
+article .media-extra {
+  display: inline;
+}
+
+.article-media ul {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.article-media ul li {
+  display: inline;
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
