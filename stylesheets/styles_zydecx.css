@@ -19,19 +19,15 @@ body {
 }
 
 #page-wrapper {
-  width: 640px;
+  width: 80%;
   margin: 0 auto;
-  background: #DEDEDE;
+/*  background: #DEDEDE;*/
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   -o-border-radius: 8px;
   -ms-border-radius: 8px;
   -khtml-border-radius: 8px;
   border-radius: 8px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 3px 10px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 3px 10px;
-  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 3px 10px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 3px 10px;
 }
 
 header, section, footer {
@@ -51,6 +47,13 @@ p {
 strong {
   color: #222;
   font-weight: 700;
+}
+
+#header-container, #main-container .page-content, #main-container aside nav {
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 8px 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 8px 8px;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 8px 8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 8px 8px;
 }
 
 #header-container  .header-wrapper {
@@ -180,6 +183,10 @@ strong {
   -webkit-font-smoothing: antialiased;
 }
 
+#header-container .menu-container {
+  background: #DEDEDE;
+}
+
 #header-container .menu-container ul {
   margin: 0;
   padding: 0;
@@ -212,22 +219,8 @@ strong {
 }
 
 #main-container {
-  padding: 15px 20px;
-  font-size: 15px;
-  border-top: 1px solid #fff;
-  background: -webkit-gradient(linear, 50% 0%, 50% 700, color-stop(0%, #fafafa), color-stop(100%, #dedede));
-  background: -webkit-linear-gradient(#fafafa, #dedede 700px);
-  background: -moz-linear-gradient(#fafafa, #dedede 700px);
-  background: -o-linear-gradient(#fafafa, #dedede 700px);
-  background: -ms-linear-gradient(#fafafa, #dedede 700px);
-  background: linear-gradient(#fafafa, #dedede 700px);
-  -moz-border-radius: 0 0 8px 8px;
-  -webkit-border-radius: 0 0 8px 8px;
-  -o-border-radius: 0 0 8px 8px;
-  -ms-border-radius: 0 0 8px 8px;
-  -khtml-border-radius: 0 0 8px 8px;
-  border-radius: 0 0 8px 8px;
   position: relative;
+/*  overflow: hidden;*/
 }
 
 article header {
@@ -266,6 +259,67 @@ article .media-extra {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+#main-container .page-content, #main-container aside nav {
+  padding: 15px 20px;
+  font-size: 15px;
+  border-top: 1px solid #fff;
+  background: -webkit-gradient(linear, 50% 0%, 50% 700, color-stop(0%, #fafafa), color-stop(100%, #dedede));
+  background: -webkit-linear-gradient(#fafafa, #dedede 700px);
+  background: -moz-linear-gradient(#fafafa, #dedede 700px);
+  background: -o-linear-gradient(#fafafa, #dedede 700px);
+  background: -ms-linear-gradient(#fafafa, #dedede 700px);
+  background: linear-gradient(#fafafa, #dedede 700px);
+  -moz-border-radius: 0 0 8px 8px;
+  -webkit-border-radius: 0 0 8px 8px;
+  -o-border-radius: 0 0 8px 8px;
+  -ms-border-radius: 0 0 8px 8px;
+  -khtml-border-radius: 0 0 8px 8px;
+  border-radius: 0 0 8px 8px; 
+}
+
+#main-container .page-content {
+  float: left;
+  margin-right: 270px;
+}
+
+#main-container aside {
+  width: 250px;
+  position: absolute;
+  right: 0;
+}
+
+#main-container aside nav {
+  border-radius: 8px 0 8px 8px;
+  margin-bottom: 25px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav ul li {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav ul li a {
+  font-size: 14px;
+}
+
+#footer-container {
+  clear: both;
+}
+
+.row::before, .row::after {
+  content: "";
+  display: table;
+  line-height: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
