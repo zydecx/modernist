@@ -427,9 +427,10 @@ footer a {
 }
 footer p {
   float: left;
+  margin-left: 15px;
 }
-footer p + p {
-  float: right;
+footer p:first-child {
+  margin-left: 0;
 }
 
 @media print, screen and (max-width: 740px) {
