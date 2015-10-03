@@ -49,6 +49,30 @@ strong {
   font-weight: 700;
 }
 
+input.search {
+  width: 100%;
+  padding: 0px;
+  border: 1px solid #a0a0a0;
+  border-radius: 6px;
+  margin: 0px;
+  height: 28px;
+  outline: none;
+  padding: 2px 5px;
+}
+
+input.search:hover, input.search:focus {
+  border-left: 1px solid #a0a0a0;
+  border-top: 1px solid #a0a0a0;
+}
+
+input.search:focus {
+  background: rgb(255, 255, 255);
+}
+
+/* input.search.google {
+  background: url(https://www.google.com/cse/static/zh_CN/google_custom_search_watermark.gif) 0% 50% no-repeat rgb(255, 255, 255);
+} */
+
 #header-container, #main-container .page-content, #main-container aside nav {
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 8px 8px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 8px 8px;
@@ -128,7 +152,7 @@ strong {
   -webkit-box-shadow: inset rgba(255, 255, 255, 0.45) 0 1px 0, inset rgba(0, 0, 0, 0.2) 0 -1px 0;
   -o-box-shadow: inset rgba(255, 255, 255, 0.45) 0 1px 0, inset rgba(0, 0, 0, 0.2) 0 -1px 0;
   box-shadow: inset rgba(255, 255, 255, 0.45) 0 1px 0, inset rgba(0, 0, 0, 0.2) 0 -1px 0;
-  width: 240px;
+  /* width: 240px; */
 }
 #header-container .header-wrapper ul:before {
   content: '';
@@ -153,7 +177,7 @@ strong {
 #header-container .header-wrapper ul li {
   width: 79px;
   float: left;
-  border-right: 1px solid #3A7CBE;
+  /* border-right: 1px solid #3A7CBE; */
   height: 38px;
 }
 #header-container .header-wrapper ul li + li {
@@ -223,6 +247,10 @@ strong {
 /*  overflow: hidden;*/
 }
 
+article {
+  margin-bottom: 25px;
+}
+
 article header {
   margin-bottom: 22px;
 }
@@ -261,6 +289,10 @@ article .media-extra {
   list-style-type: none;
 }
 
+article .article-more {
+  margin-top: -15px;
+}
+
 #main-container .page-content, #main-container aside nav {
   padding: 15px 20px;
   font-size: 15px;
@@ -282,6 +314,11 @@ article .media-extra {
 #main-container .page-content {
   float: left;
   margin-right: 270px;
+}
+
+#main-container .page-content.noaside {
+  margin-right: 0;
+  float: none;
 }
 
 #main-container aside {
@@ -310,6 +347,57 @@ nav ul li {
 
 nav ul li a {
   font-size: 14px;
+}
+
+.pagination-container ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-container ul li {
+  float: left;
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-container ul li a, .pagination-container ul li span {
+  background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #ffffff 0%, #efefef 100%) repeat scroll 0 0;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  color: #666;
+  float: left;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  margin: 0 5px 0 0;
+  min-width: 14px;
+  padding: 0 7px;
+  text-align: center;
+}
+
+.pagination-container ul li.active a, .pagination-container ul li.active span {
+  background: #666 none repeat scroll 0 0;
+  border-color: #444;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 1), 0 0 2px rgba(0, 0, 0, 0.3) inset;
+  color: #fff;
+  cursor: default;
+}
+
+.pagination-container ul li.disabled a, .pagination-container ul li.disabled span {
+  background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #bbbbbb 0%, #efefef 100%) repeat scroll 0 0;
+  cursor: default;
+}
+
+.pagination-container ul li.collapse a, .pagination-container ul li.collapse span {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: default;
+  font-weight: bold;
 }
 
 #footer-container {
