@@ -2,8 +2,9 @@
 
 Original work is done by [orderedlist](http://github.com/orderedlist). Based on that, `index_zydecx.html` and `styles_zydecx.css` are added to support two-column layout for better experience in blogs.
 
-[Demo the original Theme(One-Column)](http://zydecx.github.com/modernist/)
-[Demo the new Theme(Two-Columns)](http://zydecx.github.com/modernist/index_zydecx.html)
+[Demo the original Theme(One-Column)](http://zydecx.github.io/modernist/index.html)
+
+[Demo the new Theme(Two-Columns)](http://zydecx.github.io/modernist/index_zydecx.html)
 
 This is the raw HTML and styles that are used for the *modernist* theme on [GitHub Pages](http://pages.github.com/).
 
