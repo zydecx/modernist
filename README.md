@@ -6,6 +6,8 @@ Original work is done by [orderedlist](http://github.com/orderedlist). Based on 
 
 [Demo the new Theme(Two-Columns)](http://zydecx.github.io/modernist/index_zydecx.html)
 
+[Demo the new Steady Theme(Two-Columns)](http://zydecx.github.io/modernist/index_zydecx_steady.html)
+
 This is the raw HTML and styles that are used for the *modernist* theme on [GitHub Pages](http://pages.github.com/).
 
 # SCSS
